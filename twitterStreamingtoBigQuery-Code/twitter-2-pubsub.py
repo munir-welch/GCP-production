@@ -65,8 +65,17 @@ if __name__ == '__main__':
     '''Set topic path with topic name and Project id'''
     topic_path = publisher.topic_path(config.PROJECT_ID, config.TOPIC_NAME)
 
-    '''Create initial topic'''
-    #publisher.create_topic(topic_path)
+    
+    while True:
+        answer = input('Does the Topic you specified in the config.py folder already exist? Please Enter y/n   ')
+        if answer[0].lower() == 'y':
+            break
+        elif answer[0].lower() == 'n':
+            publisher.create_topic(topic_path)
+            print('topic created')
+            break
+        else:
+             print('please enter a valid response ')
 
 
     auth = tweepy.OAuthHandler(config.TWITTER_APP_KEY, config.TWITTER_APP_SECRET)
