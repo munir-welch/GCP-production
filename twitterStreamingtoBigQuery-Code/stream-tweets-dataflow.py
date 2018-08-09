@@ -8,7 +8,7 @@ from apache_beam.options.pipeline_options import GoogleCloudOptions
 from apache_beam.options.pipeline_options import StandardOptions
 from apache_beam.options.pipeline_options import SetupOptions
 from apache_beam.io.gcp.internal.clients import bigquery
-from textblob import TextBlob
+
 
 options = PipelineOptions()
 
