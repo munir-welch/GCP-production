@@ -24,8 +24,8 @@ TWITTER_SECRET = 'Zsw17mh9OiXDfaf993njgHhGZHxYTHrrD9Ae8fgqEc1mq'
 
 '''Stream-Tweets-Dataflow Configuration'''
 
-#PLEASE ENTER A GCS STAGIN LOCATION IN THE FORM gs://<BUCKET_NAME>/staging
+#PLEASE ENTER A GCS STAGING LOCATION IN THE FORM gs://<BUCKET_NAME>/staging
 STAGING = 'gs://dod-mwja-project1/staging'
 
 #PLEASE ENTER A GCS TEMP LOCATION IN THE FROM gs://<BUCKET_NAME>/temp
-TEMP = 'gs://dod-mwja-project1/temp
+TEMP = 'gs://dod-mwja-project1/temp'
