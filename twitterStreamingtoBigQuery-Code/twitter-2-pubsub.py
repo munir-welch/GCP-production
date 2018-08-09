@@ -6,10 +6,6 @@ import sys
 import listofcities as ct
 from google.cloud import pubsub
 
-'''Creating the client to use with GCS - json key required if running from external application'''
-storage_client = storage.Client()
-bucket = storage_client.get_bucket(config.BUCKET_NAME)
-
 
 
 '''Steam Listener subclassed from the tweepy module class Stream Listener'''
@@ -37,10 +33,11 @@ class StreamListener(tweepy.StreamListener):
         source = ct.r_source()
         #print(type(created), created)
 
-        # here we need to ocnstruct the final line of data and send each line to a csv that will remain in the folder
+        # here we need to construct the final line of data that will be sent to pubsub 
         line = [name, '-=-', text, '-=-', created, '-=-', followers, '-=-', location, '-=-', source]
         
         '''Publish message to topic convert to sting first'''
+        
         publine = ','.join(map(str, line))
         publish_line = publine.encode('utf-8')
 
