@@ -14,8 +14,8 @@ options = PipelineOptions()
 
 google_cloud_options = options.view_as(GoogleCloudOptions)
 google_cloud_options.project = config.PROJECT_ID
-google_cloud_options.staging_location = 'gs://dod-mwja-project1/staging'
-google_cloud_options.temp_location = 'gs://dod-mwja-project1/temp'
+google_cloud_options.staging_location = config.STAGING
+google_cloud_options.temp_location = config.TEMP
 options.view_as(StandardOptions).runner = 'DataflowRunner'
 options.view_as(StandardOptions).streaming = True
 options.view_as(SetupOptions)
