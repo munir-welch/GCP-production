@@ -63,7 +63,7 @@ if __name__ == '__main__':
     publisher = pubsub.PublisherClient()
 
     '''Set topic path with topic name and Project id'''
-    topic_path = publisher.topic_path(config.PROJECT_ID, 'twitter-stream')
+    topic_path = publisher.topic_path(config.PROJECT_ID, config.TOPIC_NAME)
 
     '''Create initial topic'''
     #publisher.create_topic(topic_path)
