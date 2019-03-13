@@ -9,6 +9,9 @@ storage_client = storage.Client(project=Variable.get('Gcp_project_id'))
 
 gcp_bucket = storage_client.get_bucket(Variable.get('bucket'))
 
+#------------------------------------------------------------------------------------------------------------------------#
+#-------------DLP service agent------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------#
 def inspect_file(project, filename, info_types, min_likelihood=None, 
 	custom_dictionaries=None, custom_regexes=None, 
 	max_findings=None, include_quote=True, mime_type=None):
@@ -92,7 +95,9 @@ def inspect_file(project, filename, info_types, min_likelihood=None,
 		print('No findings.')
 		return 'no_sensitve_data_found_'+filename
 
-
+#------------------------------------------------------------------------------------------------------------------------#
+#-------------Read master config file operator---------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------#
 def master_file_reader(object_file_path):
 
 	list_of_records = []
@@ -114,7 +119,9 @@ def master_file_reader(object_file_path):
 
 	return (list_of_records)
 
-
+#------------------------------------------------------------------------------------------------------------------------#
+#-------------Clean data (arbitary)--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------#
 def data_clean(file):
 	dirty_file = pd.read_csv(file)
 	print('i read a file')
@@ -128,6 +135,9 @@ def data_clean(file):
 	clean_files = dirty_file.replace(0, 'Null')
 	clean_files.to_csv(file, index=False)
 
+#------------------------------------------------------------------------------------------------------------------------#
+#-------------Get bucket ACL (to be extended)----------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------#
 
 def get_acl(file):
 	blob = gcp_bucket.get_blob(file)
