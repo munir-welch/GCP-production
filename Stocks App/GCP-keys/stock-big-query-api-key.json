@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "warm-airline-207713",
+  "private_key_id": "4df51bdbeca8e7830b13ae3b95972e0b6e148e23",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCrL61VevkOQusF\nGki6IvrBFbt1Fls1KdlekjBoER8a2Sn115v5WeFVuNiqYIq/Lqxnuq1gBR3wRp+g\nP+jiB8PCXikOdcF8DkQRVqtg9jhBMMQ9FRJ/fYLI4aooruTB6FmYvqQOhokEFlQ0\nfbynCS1cu3VEwmhpM8bwvtZE7fJOW35FhIC4VdqaqnQHwj6dIr48sk2UAR992U23\nHktm5D+B3SsNWfvt0LpNeKXTvMnmU5eIePzPIu9rzKEEDax2byNqhyopZ/+AE936\neLQEPbfVmmkXGKjLNvHnJjQ+gka26Z5j+08II3sjbagqWkmWUr/E7WntehjuyNMf\nkCgYvGyNAgMBAAECggEARyKpSz+uNhRtuDGbbinx/IGM49N19EofJ1LlZaFTxSLf\n8mZ1zLDiV+5XrrkuftKk1vf2atPFhJ68X2mfWynx2ZeqRPV/AQ+mjnPvBHxclQ5w\nRZe3l53u1o4b2QsQSVnFvZje8KBMWJP0ytlDJ0BDhujpCrkkjS70aP9MZ9lfGtrx\nFj5AKDAob6CWRZBXc4T9eDTS/ZEkijni+EXeDEhF6+YwNx1OfxJJaKzmRllpFSDO\nw028tZycLIzsV7Rw2EU+apL3/Ld2GL087GyYNp0D7YNXAPop0eW05wTMgqKss0o6\nE7rS2qK4D7eRapapDOIPqV46Qkf7QLykqSgOGJ6LuwKBgQDbv3EiwsW1FaUtZGQ0\nYtnY9uaTFnaxkN7awk8fc9M31aNedWhV1m2Vn6cKfXjlpxHYiZKLhuqiAlsfgf8m\nBx3x6PFP9cWbO2cGOcEd03+PpBNVnGYTITS6x41WcD5Z18RAPcAyh73/0K9+fICm\n13nhhMvFem8Mt3nu2Gch166tewKBgQDHbVhkvyp6SHp+FXADUeE4lavQID4c67qR\nd8FiHxDXDamSL/REBTWYSGgasDknC2IHAAYDTliJoytEyUxP5c0NnjSPUWyMlXKl\nCr5SFFLqIhcLZGOubaZZY8K9QhjvYIy0jTOUvCq0iInz8jeMB4+tihajZX/7JKxb\n1gzrke57lwKBgHFu41HURQZzA+7okalRFa8f1Go9AEwswj0ebIWJ3pBF4a0S4ibd\nJ3hDD5Ekr9GsalPiwBjyLhAvMyaSjkjtB5ImctqZvcWh5k6aZYul74UQZ0KcFzzs\nuTFpbRYfnq/150JaHep3k6aH7O9YCXkWZb36NM3do5Fm7LRUVPhtQ6gdAoGAVifW\nLUgtOMEBMmFekACatVBr9rFHREVOx7Od9x8GrnG3lXFkLNK3Ub/OQeFp/4U6Z13K\nOzlopKW6drAkaMwVp1F20YfSxnV2HvkiOeGP5JivrftD2UKDwFCJ/CuHDDuA7ium\nYhZcuLvYJWy6NKO7nbRvjU23Wa+BSveRg1/7UKcCgYAyOkukmvk64DfcE6OV5oOp\nXyHgWuNs/Ic1CSeJ8RbqWyPlWq4qt3ZCfnLhhq+muFO9weJv+JqTPsf+aMWxuZY2\nYuiBHAs5Z3I/X6JpZO7Y/b+zW3q3Uv/hyCjkfFseByqT0WWxAiMbD408ASAFUCeV\nk0gvwDb/VBUvfiKwPAlX9A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-bq-project@warm-airline-207713.iam.gserviceaccount.com",
+  "client_id": "107442851399186082045",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-bq-project%40warm-airline-207713.iam.gserviceaccount.com"
+}
