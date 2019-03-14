@@ -83,7 +83,7 @@ def logout():
 @app.route("/data")
 @login_required
 def show_data():
-	url = 'http://127.0.0.1:5002/list-data/Donald_Trump_Sentiment'
+	url = 'http://127.0.0.1:5002/list-top-5/stocks_data_NASDAQ'
 	response = requests.get(url)
 	if response.ok:
 		data = response.json()
