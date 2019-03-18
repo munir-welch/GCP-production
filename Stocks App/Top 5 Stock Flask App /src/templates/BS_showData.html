@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+     <h1> Welcome {{ current_user.username }}! </h1>
+     <h2> The top 5 trading stocks are </h2>
+    {% for x in data %}
+    <div><p>  {{x.company}} ticker({{x.symbol}}) currently at {{x.price}} up by {{x.change_percent}} from yesterday <p></div>
+    {% endfor %}
+{% endblock %}
