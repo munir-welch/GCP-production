@@ -6,12 +6,14 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 from werkzeug.urls import url_parse
 import logging
 from logging.handlers import SMTPHandler
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 login = LoginManager(app)
 login.login_view = 'login'
+bootstrap = Bootstrap(app)
 
 # import done after db is created becasue models imports db
 from models import User
@@ -33,7 +35,7 @@ def make_shell_context():
 @app.route("/")
 @app.route("/home")
 def welcome():
-	return render_template('welcome.html')
+	return render_template('BS_welcome.html')
 
 
 
@@ -49,7 +51,7 @@ def register():
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
         return redirect('/login')
-    return render_template('register.html', form=form)
+    return render_template('BS_register.html', form=form)
 
 
 
@@ -70,7 +72,7 @@ def login():
 		if not next_page or url_parse(next_page).netloc != '':
 			next_page = '/data'
 		return redirect(next_page)
-	return render_template('login.html', form=form)
+	return render_template('BS_login.html', form=form)
 
 @app.route('/logout')
 def logout():
@@ -83,13 +85,39 @@ def logout():
 @app.route("/data")
 @login_required
 def show_data():
-	url = 'http://127.0.0.1:5002/list-top-5/stocks_data_NASDAQ'
-	response = requests.get(url)
-	if response.ok:
-		data = response.json()
-	else:
-		response.raise_for_status()
-	return render_template('showdata.html', data = data)
+    url = 'http://127.0.0.1:5002/list-top-5/stocks_data_NASDAQ'
+    response = requests.get(url)
+    if response.ok:
+        data = response.json()
+    else:
+        response.raise_for_status()
+
+    # other column settings -> http://bootstrap-table.wenzhixin.net.cn/documentation/#column-options
+    columns = [
+    {
+    "field": "symbol",
+    "title": "Symbol",
+    "sortable": True,
+    },
+    {
+    "field": "company",
+    "title": "Company",
+    "sortable": True,
+    },
+    {
+    "field": "change_percent", # which is the field's name of data key 
+    "title": "Change_percent", # display as the table header's name
+    "sortable": True,
+    },
+    {
+    "field": "price",
+    "title": "Price",
+    "sortable": True,
+    }
+    ]
+
+    return render_template('BS_showDataTable.html', data=data, columns=columns)
+
 
 
 #------------------------------------------------------------------------------------------------------------------#
