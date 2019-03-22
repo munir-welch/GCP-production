@@ -1,0 +1,24 @@
+Code, Meaning
+100, continue
+101, switching protocols
+200, ok
+201, created
+202, accepted
+300, multiple choices	
+301, moved permenantly
+400, bad request
+401, unauthorised
+402, payment required
+403, forbidden
+404, not found
+405, method not allowed
+406, not acceptable
+407, proxy auth required
+408, request timeout
+409, conflict
+500, server error
+501, not implemented
+502, bad gateway
+503, out of resources
+504, gateway timeout
+505, HTTP version not supported

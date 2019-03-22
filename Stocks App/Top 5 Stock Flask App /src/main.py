@@ -85,7 +85,8 @@ def logout():
 @app.route("/data")
 @login_required
 def show_data():
-    url = 'http://127.0.0.1:5002/list-top-5/stocks_data_NASDAQ'
+    url = 'https://flask-api-dot-warm-airline-207713.appspot.com/list-top-5/stocks_data_NASDAQ'
+    #http://127.0.0.1:8000
     response = requests.get(url)
     if response.ok:
         data = response.json()
